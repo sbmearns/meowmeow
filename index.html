@@ -4,44 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IS 270 Website</title>
-
   <style>
 
+    /* BODY AND GENERAL STYLING */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Courier New', Courier, monospace;
-      background-color: #556B2F;
-      color: #FFF8DC;
-      text-align: center;
+      background-color: #556B2F; /* Olive background */
+      color: #333; /* default text inside creme bubbles */
     }
 
     /* NAV BAR */
-
-    nav{
-      display:flex;
-      justify-content:center;
-      gap:40px;
-      padding:20px;
-      background-color:#4a5f27;
-      position:sticky;
-      top:0;
-      z-index:10;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      background-color: #4a5f27; /* Darker olive */
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    nav a{
-      color:#FFF8DC;
-      text-decoration:none;
-      font-size:1.1rem;
+    nav a {
+      color: #FFF8DC; /* Creme links */
+      text-decoration: none;
+      font-size: 1.1rem;
     }
 
-    nav a:hover{
-      text-decoration:underline;
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTION BUBBLES */
+    section {
+      background-color: #FFF8DC; /* Creme bubble */
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 900px;
+      color: #333;
     }
 
     h1 {
       margin-top: 2rem;
       font-size: 3rem;
+      text-align: center;
     }
 
     .hello {
@@ -55,11 +64,10 @@
     }
 
     p {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     /* Sticky cat wrapper */
-
     .cat-wrapper {
       height: 100vh;
       position: relative;
@@ -78,7 +86,7 @@
       position: absolute;
       width: 20px;
       height: 20px;
-      background-image: url('images/cat.png');
+      background-image: url('images/cat.png'); /* Cat image */
       background-size: 400px 400px;
       transition: all 0.5s ease;
     }
@@ -89,37 +97,34 @@
 <body>
 
   <!-- NAVIGATION BAR -->
-
   <nav>
     <a href="index.html">Home</a>
     <a href="dossier.html">Specialization Dossier</a>
-    <a href="about.html">About</a>
   </nav>
 
   <main>
 
-    <h1>IS 270 Website</h1>
+    <!-- INTRO SECTION -->
+    <section>
+      <h1>IS 270 Website</h1>
+      <div class="hello">hello world</div>
+      <div class="names">
+        Jack Morrissey, Sophie Mearns, Ivan Mairesse, and Sam Warford
+      </div>
+      <p>Welcome to our IS 270 class website! Explore our specialization dossiers and learn more about our projects and contributions.</p>
+    </section>
 
-    <div class="hello">hello world</div>
-
-    <div class="names">
-      Jack Morrissey, Sophie Mearns, Ivan Mairesse, and Sam Warford
-    </div>
-
-    <p>/p>
-
-    <!-- Cat mosaic with sticky wrapper -->
-
-    <div class="cat-wrapper">
-      <div class="cat-mosaic"></div>
-    </div>
-
-    <div style="height: 400px;"></div>
+    <!-- CAT MOSAIC SECTION -->
+    <section>
+      <div class="cat-wrapper">
+        <div class="cat-mosaic"></div>
+      </div>
+      <div style="height: 400px;"></div>
+    </section>
 
   </main>
 
   <script>
-
     const mosaic = document.querySelector('.cat-mosaic');
 
     const rows = 20;
@@ -162,29 +167,20 @@
     window.addEventListener('scroll', () => {
 
       const rect = wrapper.getBoundingClientRect();
-
       const start = window.innerHeight;
       const end = 0;
 
       let progress = 1 - (rect.top - end) / (start - end);
-
       progress = Math.min(Math.max(progress, 0), 1);
 
       squares.forEach(sq => {
-
-        sq.el.style.left =
-          `${sq.startX + (sq.targetX - sq.startX) * progress}px`;
-
-        sq.el.style.top =
-          `${sq.startY + (sq.targetY - sq.startY) * progress}px`;
-
+        sq.el.style.left = `${sq.startX + (sq.targetX - sq.startX) * progress}px`;
+        sq.el.style.top = `${sq.startY + (sq.targetY - sq.startY) * progress}px`;
       });
 
     });
-
   </script>
 
 </body>
 </html>
-
 
