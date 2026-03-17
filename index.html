@@ -10,9 +10,9 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New', Courier, monospace; /* Match dossier font */
       background-color: #556B2F; /* Olive background */
-      color: #333; /* default text inside creme bubbles */
+      color: #333; /* text inside sections */
     }
 
     /* NAV BAR */
@@ -67,28 +67,13 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Sticky cat wrapper */
-    .cat-wrapper {
-      height: 100vh;
-      position: relative;
-    }
-
-    .cat-mosaic {
-      position: sticky;
-      top: 50px;
-      width: 400px;
-      height: 400px;
+    /* CAT IMAGE */
+    .cat-image {
+      width: 100%;
+      max-height: 50vh; /* Take bottom half of screen */
+      object-fit: cover;
+      display: block;
       margin: 0 auto;
-      perspective: 1000px;
-    }
-
-    .cat-square {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url('images/cat.png'); /* Cat image */
-      background-size: 400px 400px;
-      transition: all 0.5s ease;
     }
 
   </style>
@@ -114,72 +99,10 @@
       <p>Welcome to our IS 270 class website! Explore our specialization dossiers and learn more about our projects and contributions.</p>
     </section>
 
-    <!-- CAT MOSAIC SECTION -->
-    <section>
-      <div class="cat-wrapper">
-        <div class="cat-mosaic"></div>
-      </div>
-      <div style="height: 400px;"></div>
-    </section>
+    <!-- CAT IMAGE SECTION -->
+    <img src="images/cat.png" alt="Cat" class="cat-image">
 
   </main>
-
-  <script>
-    const mosaic = document.querySelector('.cat-mosaic');
-
-    const rows = 20;
-    const cols = 20;
-    const containerWidth = 400;
-    const containerHeight = 400;
-    const squareSize = containerWidth / cols;
-
-    let squares = [];
-
-    for (let y = 0; y < rows; y++) {
-      for (let x = 0; x < cols; x++) {
-
-        const square = document.createElement('div');
-        square.classList.add('cat-square');
-
-        square.style.backgroundPosition = `-${x * squareSize}px -${y * squareSize}px`;
-
-        const randomX = Math.random() * containerWidth * 1.5 - containerWidth/2;
-        const randomY = Math.random() * containerHeight * 1.5;
-
-        square.style.left = `${randomX}px`;
-        square.style.top = `${randomY}px`;
-
-        mosaic.appendChild(square);
-
-        squares.push({
-          el: square,
-          targetX: x * squareSize,
-          targetY: y * squareSize,
-          startX: randomX,
-          startY: randomY
-        });
-
-      }
-    }
-
-    const wrapper = document.querySelector('.cat-wrapper');
-
-    window.addEventListener('scroll', () => {
-
-      const rect = wrapper.getBoundingClientRect();
-      const start = window.innerHeight;
-      const end = 0;
-
-      let progress = 1 - (rect.top - end) / (start - end);
-      progress = Math.min(Math.max(progress, 0), 1);
-
-      squares.forEach(sq => {
-        sq.el.style.left = `${sq.startX + (sq.targetX - sq.startX) * progress}px`;
-        sq.el.style.top = `${sq.startY + (sq.targetY - sq.startY) * progress}px`;
-      });
-
-    });
-  </script>
 
 </body>
 </html>
