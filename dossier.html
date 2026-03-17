@@ -1,196 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>IS 270 Specialization Dossier: Guadalupe Martinez</title>
-<style>
-/* Base Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #556B2F; /* olive green */
-  color: #111;
-  overflow-x: hidden;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IS 270 Specialization Dossier – Guadalupe Martinez</title>
+  <style>
+    /* GENERAL STYLES */
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #556B2F; /* Olive green */
+      color: #333;
+      overflow-x: hidden;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: rgba(85,107,47,0.95);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #FFF8DC;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-  background: rgba(255,255,255,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+    /* POLKA DOTS BACKGROUND */
+    .polka-dot {
+      position: absolute;
+      border-radius: 50%;
+      background: #FFDDA0; /* creamy-orange */
+      opacity: 0.5;
+      pointer-events: none;
+      transform-origin: center center;
+    }
 
-nav a {
-  color: #FFF8DC;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-}
+    /* HEADER SECTION */
+    .header-section {
+      text-align: center;
+      padding: 60px 20px 30px 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .header-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #FFF8DC;
+    }
+    .header-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #FFF8DC;
+      font-weight: normal;
+    }
+    .header-section img {
+      max-width: 300px;
+      width: 80%;
+      border-radius: 30px;
+      display: block;
+      margin: 0 auto 40px auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
 
-nav a:hover {
-  text-decoration: underline;
-}
+    /* BUBBLE SECTIONS */
+    .section-bubble {
+      background-color: #FFF8DC;
+      color: #333;
+      margin: 40px auto;
+      padding: 30px 25px;
+      max-width: 900px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .section-bubble h3 {
+      margin-top: 0;
+      color: #556B2F;
+    }
+    .section-bubble p, .section-bubble li {
+      line-height: 1.6;
+    }
+    .section-bubble ul {
+      padding-left: 20px;
+    }
 
-/* Section bubbles */
-.section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #FFF8DC;
-  color: #111;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  line-height: 1.6;
-  font-size: 18px;
-  position: relative;
-  overflow: hidden;
-}
+    /* SCROLL ANIMATION */
+    .section-bubble.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .section-bubble {
+      transform: translateY(50px);
+      opacity: 0;
+    }
 
-/* Section headers */
-.section h2 {
-  margin-top: 0;
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #FFF8DC;
+      background: rgba(85,107,47,0.95);
+      margin-top: 60px;
+    }
 
-/* Subtitle */
-.subtitle {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 10px;
-  color: #FFF8DC;
-}
-
-/* Image card */
-.dossier-image{
-  max-width:900px;
-  margin:40px auto 20px auto;
-  padding:15px;
-  background:#FFF8DC;
-  border-radius:18px;
-  box-shadow:0 12px 25px rgba(0,0,0,0.25);
-  overflow:hidden;
-}
-
-.dossier-image img{
-  width:100%;
-  border-radius:14px;
-  display:block;
-  transition: transform 1s ease;
-}
-
-/* Polka dot background canvas */
-#polkaCanvas{
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  pointer-events:none;
-  z-index:0;
-}
-</style>
+    @media(max-width: 768px){
+      .header-section img {
+        max-width: 90%;
+      }
+      nav {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<canvas id="polkaCanvas"></canvas>
+  <!-- POLKA DOTS CONTAINER -->
+  <canvas id="polkaCanvas"></canvas>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="dossier.html">Specialization Dossier</a>
-  <a href="about.html">About</a>
-</nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dossier.html">Specialization Dossier</a>
+    <a href="about.html">About</a>
+  </nav>
 
-<main>
-<h1 style="text-align:center; margin-top:40px;">IS 270 Specialization Dossier</h1>
-<div class="subtitle">Guadalupe Martinez – California Revealed's Audiovisual Digitization and Preservation Manager</div>
+  <!-- HEADER -->
+  <div class="header-section">
+    <h1>IS 270 Specialization Dossier</h1>
+    <h2>Guadalupe Martinez – California Revealed's Audiovisual Digitization and Preservation Manager</h2>
+    <img src="guadalupe.png" alt="Guadalupe Martinez">
+  </div>
 
-<div class="dossier-image">
-  <img src="guadalupe.png" alt="Guadalupe Martinez screenshot">
-</div>
+  <!-- OVERVIEW -->
+  <div class="section-bubble">
+    <h3>Overview</h3>
+    <p>California Revealed is a statewide digitization initiative which helps public libraries, archives, museums, historical societies, and other heritage groups digitize, preserve, and provide online access to archival materials documenting the state's histories, arts, and cultures. It also provides support and assistance for cataloging, community archiving, and K-12 curriculum development, and provides training and support for Memory Labs at public libraries across California. It began in 2010 as CAVPP as a temporary program funded by the California State Library, and since then has grown in capability, scope, and demand year after year.</p>
 
-<div class="section">
-<h2>Overview</h2>
-<p>
-California Revealed is a statewide digitization initiative which helps public libraries, archives, museums, historical societies, and other heritage groups digitize, preserve, and provide online access to archival materials documenting the state's histories, arts, and cultures. It also provides support and assistance for cataloging, community archiving, and K-12 curriculum development, and provides training and support for Memory Labs at public libraries across California. It began in 2010 as CAVPP as a temporary program funded by the California State Library, and since then has grown in capability, scope, and demand year after year.
-</p>
-<p>
-As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez manages and oversees California Revealed projects from application review to long-term preservation. This involves coordinating with partner organizations to write basic metadata for and then ship their collections, which are then processed, documented, and given further metadata before being sent to third-party vendors for digitization. Once digitized, they are checked for fixity and to see if metadata has been assigned correctly, and Guadalupe and other preservation managers will communicate with the digitization vendor in the case of any discrepancies. The initial quality control report is then sent to partners to be signed off, but this is not always done as familiarity with QC varies from organization to organization.
-</p>
-<p>
-If requested, partners will then be given a physical hard drive of their digitized materials. Digitized collections are finally given three points of access, one being access copies stored on an AWS web server, and the other two being LTO tape copies with preservation quality files kept on them, one of which is kept at California Revealed in Sacramento, and the other of which is sent to a vault in Ohio. Throughout this process Guadalupe consults partners, preservation experts, vendors, and third-party services to resolve issues, establish trust, and explain A/V preservation at various levels.
-</p>
-</div>
+    <p>As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez manages and oversees California Revealed projects from application review to long-term preservation. This involves coordinating with partner organizations to write basic metadata for and then ship their collections, which are then processed, documented, and given further metadata before being sent to third-party vendors for digitization. Once digitized, they are checked for fixity and to see if metadata has been assigned correctly, and Guadalupe and other preservation managers will communicate with the digitization vendor in the case of any discrepancies. The initial quality control report is then sent to partners to be signed off, but this is not always done as familiarity with QC varies from organization to organization.</p>
 
-<div class="section">
-<h2>Typical Tasks</h2>
-<p>
-As Audiovisual Digitization and Preservation Manager, Guadalupe is responsible for assessing the feasibility of intaking a digitization project from community heritage group partners, adapting the partner’s initial metadata to California Revealed’s formatting standards, and coordinating the digitization and preservation of the materials with an external vendor. In addition to project management, Guadalupe creates educational resources such as handbooks to help demystify the digitization process and the jargon surrounding it for their community in an effort to not only help them be better stewards of their materials but to also help gain their trust as partners.
-</p>
-<p>
-One specialty she performs as Manager is establishing a priority of care for communities based on FEMA Natural Risk Index for Natural Hazards and Healthy Places Index (HPI) scores. Such factors that are taken into account for FEMA results are the risks for climate disaster, while HPI is concerned with employment and education opportunities, air quality and access to clean water, among others impacting life expectancy. Guadalupe emphasized the importance of providing “more access to people who are already being under-resourced in other aspects of their lives, not just from a historical standpoint.” Collecting this information is vital for not only better understanding the preservation needs and level of impact California Revealed can have but also can justify further funding.
-</p>
-<p>
-Three similar job descriptions at similar levels of seniority are:
-<ul>
-<li>Video Preservation Specialist, Library of Congress</li>
-<li>Audiovisual Systems Archivist and Access Coordinator, University of Georgia</li>
-<li>Library Associate II (Digitization Lab Supervisor), Georgia State University</li>
-</ul>
-</p>
-</div>
+    <p>If requested, partners will then be given a physical hard drive of their digitized materials. Digitized collections are finally given three points of access, one being access copies stored on an AWS web server, and the other two being LTO tape copies with preservation quality files kept on them, one of which is kept at California Revealed in Sacramento, and the other of which is sent to a vault in Ohio. Throughout this process Guadalupe consults partners, preservation experts, vendors, and third-party services to resolve issues, establish trust, and explain A/V preservation at various levels.</p>
+  </div>
 
-<!-- Add remaining sections in similar <div class="section"> bubbles -->
-<!-- Overview, Professional Context, Job Market, Technical Skills, Labor Trends, Annotated Bibliography, Summary of Contributions -->
+  <!-- TYPICAL TASKS -->
+  <div class="section-bubble">
+    <h3>Typical Tasks</h3>
+    <p>As Audiovisual Digitization and Preservation Manager, Guadalupe is responsible for assessing the feasibility of intaking a digitization project from community heritage group partners, adapting the partner’s initial metadata to California Revealed’s formatting standards, and coordinating the digitization and preservation of the materials with an external vendor. In addition to project management, Guadalupe creates educational resources such as handbooks to help demystify the digitization process and the jargon surrounding it for their community in an effort to not only help them be better stewards of their materials but to also help gain their trust as partners.</p>
 
-</main>
+    <p>One specialty she performs as Manager is establishing a priority of care for communities based on FEMA Natural Risk Index for Natural Hazards and Healthy Places Index (HPI) scores. Such factors that are taken into account for FEMA results are the risks for climate disaster, while HPI is concerned with employment and education opportunities, air quality and access to clean water, among others impacting life expectancy. Guadalupe emphasized the importance of providing “more access to people who are already being under-resourced in other aspects of their lives, not just from a historical standpoint.” Collecting this information is vital for not only better understanding the preservation needs and level of impact California Revealed can have but also can justify further funding.</p>
 
-<script>
-// Polka dot background
-const canvas = document.getElementById('polkaCanvas');
-const ctx = canvas.getContext('2d');
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
+    <p>Three similar job descriptions at similar levels of seniority are:</p>
+    <ul>
+      <li>Video Preservation Specialist, Library of Congress</li>
+      <li>Audiovisual Systems Archivist and Access Coordinator, University of Georgia</li>
+      <li>Library Associate II (Digitization Lab Supervisor), Georgia State University</li>
+    </ul>
+  </div>
 
-const numDots = 40;
-const dots = [];
+  <!-- Add remaining sections here in similar bubble style -->
 
-for(let i=0;i<numDots;i++){
-  dots.push({
-    x: Math.random()*width,
-    y: Math.random()*height,
-    r: Math.random()*5+3,
-    maxR: Math.random()*15+10,
-    speed: Math.random()*0.02+0.01
-  });
-}
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 IS 270 Dossier – Built by Sophie Mearns and Team
+  </footer>
 
-function drawDots(){
-  ctx.clearRect(0,0,width,height);
-  dots.forEach(d=>{
-    d.r += d.speed;
-    if(d.r > d.maxR || d.r < 3) d.speed*=-1;
-    ctx.beginPath();
-    ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
-    ctx.fillStyle='rgba(255, 200, 150, 0.4)';
-    ctx.fill();
-  });
-  requestAnimationFrame(drawDots);
-}
-drawDots();
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const bubbles = document.querySelectorAll('.section-bubble');
 
-window.addEventListener('resize',()=>{
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-});
-</script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {threshold: 0.1});
 
+    bubbles.forEach(b => observer.observe(b));
+
+    // POLKA DOTS SCRIPT
+    const canvas = document.getElementById('polkaCanvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+    const dots = [];
+
+    for(let i=0;i<30;i++){
+      dots.push({
+        x: Math.random()*width,
+        y: Math.random()*height,
+        r: Math.random()*10+5,
+        baseR: Math.random()*10+5,
+        speed: Math.random()*0.02+0.01
+      });
+    }
+
+    function animateDots(){
+      ctx.clearRect(0,0,width,height);
+      dots.forEach(dot=>{
+        dot.r = dot.baseR + Math.sin(Date.now()*dot.speed)*5;
+        ctx.beginPath();
+        ctx.arc(dot.x,dot.y,dot.r,0,Math.PI*2);
+        ctx.fillStyle = 'rgba(255,221,160,0.4)';
+        ctx.fill();
+      });
+      requestAnimationFrame(animateDots);
+    }
+    animateDots();
+
+    window.addEventListener('resize',()=>{
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>
