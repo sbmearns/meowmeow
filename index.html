@@ -1,135 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IS 270 Website</title>
+  <meta charset="UTF-8">
+  <title>Sophie Mearns – Archivist.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Courier New', Courier, monospace; /* indie artsy font style */
-      background-color: #556B2F; /* deep earthy olive green */
-      color: #FFF8DC; /* cream/pastel yellow text */
-      text-align: center;
+      box-sizing: border-box;
     }
 
-    h1 {
-      margin-top: 2rem;
-      font-size: 3rem;
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111;
     }
 
-    .hello {
-      font-size: 2rem;
-      margin: 1rem 0;
-    }
-
-    .names {
-      margin: 1rem 0;
-      font-size: 1.2rem;
-    }
-
-    p {
-      margin-bottom: 2rem;
-    }
-
-    /* Sticky cat wrapper */
-    .cat-wrapper {
-      height: 100vh; /* full viewport height */
+    /* HERO SECTION */
+    .hero {
       position: relative;
+      height: 100vh;
+      background: url('lavender2.png') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .cat-mosaic {
-      position: sticky;
-      top: 50px; /* stays near top of viewport */
-      width: 400px;
-      height: 400px;
-      margin: 0 auto;
-      perspective: 1000px;
-    }
-
-    .cat-square {
+    /* Soft overlay */
+    .hero::before {
+      content: "";
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url('images/cat.png'); /* make sure cat.png is inside images folder */
-      background-size: 400px 400px; /* match container size */
-      transition: all 0.5s ease;
+      inset: 0;
+      background: rgba(255, 240, 230, 0.6);
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      gap: 30px;
+      padding: 30px 60px;
+      font-weight: 400;
+      z-index: 2;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO CONTENT */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 60px 120px 60px;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* FOOTER BAR */
+    .footer-bar {
+      background-color: #b89488;
+      color: #1e1e1e;
+      padding: 50px 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-left {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .footer-center,
+    .footer-right {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .footer-right a {
+      color: #1e1e1e;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 42px;
+      }
+
+      .hero-content {
+        padding: 0 30px 80px 30px;
+      }
+
+      nav {
+        padding: 20px 30px;
+      }
+
+      .footer-bar {
+        padding: 40px 30px;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
 
-  <main>
-    <h1>IS 270 Website</h1>
-    <div class="hello">hello world</div>
-    <div class="names">Jack Morrissey, U+0053 U+006F U+0070 U+0068 U+0069 U+0065 Mearns, Ivan Mairesse, and Sam Warford</div>
-    <p>archive / notes / experiments</p>
+  <section class="hero">
 
-    <!-- Cat mosaic with sticky wrapper -->
-    <div class="cat-wrapper">
-      <div class="cat-mosaic"></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dossier.html">Specialization Dossier</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Sophie Mearns<br>Archivist.</h1>
+      <p>
+        Passionate about preserving memory and expanding
+        access to community and institutional archives through digital collections.
+      </p>
     </div>
 
-    <!-- Optional extra scroll space -->
-    <div style="height: 400px;"></div>
-  </main>
+  </section>
 
-  <script>
-    const mosaic = document.querySelector('.cat-mosaic');
-    const rows = 20;
-    const cols = 20;
-    const containerWidth = 400;
-    const containerHeight = 400;
-    const squareSize = containerWidth / cols;
+  <section class="footer-bar">
+    <div class="footer-left">
+      Sophie Mearns – Archivist
+    </div>
 
-    let squares = [];
+    <div class="footer-center">
+      Los Angeles, California<br>
+      (619) 873-8378<br>
+      sbmearns@g.ucla.edu
+    </div>
 
-    // create squares
-    for (let y = 0; y < rows; y++) {
-      for (let x = 0; x < cols; x++) {
-        const square = document.createElement('div');
-        square.classList.add('cat-square');
-
-        // correct background position
-        square.style.backgroundPosition = `-${x * squareSize}px -${y * squareSize}px`;
-
-        // start scattered randomly
-        const randomX = Math.random() * containerWidth * 1.5 - containerWidth/2;
-        const randomY = Math.random() * containerHeight * 1.5;
-        square.style.left = `${randomX}px`;
-        square.style.top = `${randomY}px`;
-
-        mosaic.appendChild(square);
-
-        squares.push({
-          el: square,
-          targetX: x * squareSize,
-          targetY: y * squareSize,
-          startX: randomX,
-          startY: randomY
-        });
-      }
-    }
-
-    // animate squares based on scroll
-    const wrapper = document.querySelector('.cat-wrapper');
-
-    window.addEventListener('scroll', () => {
-      const rect = wrapper.getBoundingClientRect();
-      const start = window.innerHeight;
-      const end = 0;
-      let progress = 1 - (rect.top - end) / (start - end);
-      progress = Math.min(Math.max(progress, 0), 1); // clamp 0 → 1
-
-      squares.forEach(sq => {
-        sq.el.style.left = `${sq.startX + (sq.targetX - sq.startX) * progress}px`;
-        sq.el.style.top = `${sq.startY + (sq.targetY - sq.startY) * progress}px`;
-      });
-    });
-  </script>
+    <div class="footer-right">
+      <br>
+      Powered by <a href="#">GitHub</a>
+    </div>
+  </section>
 
 </body>
 </html>
-
 
