@@ -1,89 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Specialization Dossier – Sophie Mearns</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>Specialization Dossier</title>
 
 <style>
 
 body{
-font-family:'Inter',sans-serif;
 margin:0;
-color:#111;
-line-height:1.6;
-background:#fff;
+padding:0;
+font-family:'Courier New', Courier, monospace;
+background-color:#556B2F;
+color:#FFF8DC;
+text-align:center;
 }
+
+/* NAV BAR */
 
 nav{
 display:flex;
-justify-content:flex-end;
-gap:30px;
-padding:30px 60px;
+justify-content:center;
+gap:40px;
+padding:20px;
+background:#4a5f27;
+position:sticky;
+top:0;
+z-index:10;
 }
 
 nav a{
+color:#FFF8DC;
 text-decoration:none;
-color:#111;
-font-size:16px;
+font-size:1.1rem;
 }
 
 nav a:hover{
 text-decoration:underline;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:40px 60px;
-}
+/* PAGE HEADER */
 
 h1{
-font-size:42px;
-margin-bottom:10px;
+margin-top:2rem;
+font-size:2.8rem;
 }
 
-h2{
-margin-top:40px;
-font-size:26px;
+.subtitle{
+margin-bottom:3rem;
+font-size:1.2rem;
 }
 
-h3{
-margin-top:25px;
-font-size:20px;
+/* DOSSIER SECTION BUBBLES */
+
+.section{
+max-width:900px;
+margin:60px auto;
+padding:35px 40px;
+background:#FFF8DC;
+color:#2d2d2d;
+border-radius:18px;
+text-align:left;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
 }
 
-p{
-margin-top:12px;
+/* scroll reveal */
+
+.section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
-ul{
-margin-top:10px;
+/* subtle hover */
+
+.section:hover{
+transform:translateY(-5px);
+box-shadow:0 14px 30px rgba(0,0,0,0.3);
+}
+
+/* headings inside sections */
+
+.section h2{
+margin-top:0;
+font-size:1.6rem;
+color:#3b4c1c;
+}
+
+.section h3{
+margin-top:1.4rem;
+}
+
+.section p{
+line-height:1.6;
+margin-bottom:1rem;
+}
+
+.section ul{
 padding-left:20px;
 }
 
-.footer{
-background:#b89488;
+/* footer */
+
+footer{
 margin-top:80px;
-padding:40px 60px;
-color:#1e1e1e;
-}
-
-@media (max-width:768px){
-
-.container{
 padding:30px;
-}
-
-nav{
-padding:20px 30px;
-}
-
+font-size:.9rem;
+color:#ddd;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -94,115 +125,109 @@ padding:20px 30px;
 <a href="about.html">About</a>
 </nav>
 
-<div class="container">
-
 <h1>IS 270 Specialization Dossier</h1>
-<h3>Guadalupe Martinez – California Revealed's Audiovisual Digitization and Preservation Manager</h3>
+<div class="subtitle">Guadalupe Martinez – California Revealed's Audiovisual Digitization and Preservation Manager</div>
 
-<p><strong>Full Interview Transcript</strong></p>
-
+<div class="section">
 <h2>Overview</h2>
 
-<p>
-California Revealed is a statewide digitization initiative which helps public libraries, archives, museums, historical societies, and other heritage groups digitize, preserve, and provide online access to archival materials documenting the state's histories, arts, and cultures. It also provides support and assistance for cataloging, community archiving, and K-12 curriculum development, and provides training and support for Memory Labs at public libraries across California.
-</p>
+<p>California Revealed is a statewide digitization initiative that helps public libraries, archives, museums, historical societies, and community heritage organizations digitize, preserve, and provide online access to archival materials documenting California’s histories, arts, and cultures.</p>
 
-<p>
-It began in 2010 as CAVPP as a temporary program funded by the California State Library, and since then has grown in capability, scope, and demand year after year.
-</p>
+<p>The program also supports cataloging work, community archiving projects, K–12 curriculum development, and Memory Labs at public libraries across California.</p>
 
-<p>
-As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez manages and oversees California Revealed projects from application review to long-term preservation. This involves coordinating with partner organizations to write basic metadata for and ship their collections, which are then processed and sent to third-party vendors for digitization.
-</p>
+<p>Originally founded in 2010 as the California Audiovisual Preservation Project (CAVPP), the initiative began as a temporary program funded by the California State Library. Over time it has grown significantly in scope and demand.</p>
+
+</div>
+
+<div class="section">
 
 <h2>Typical Tasks</h2>
 
-<p>
-Guadalupe is responsible for assessing the feasibility of digitization projects from community heritage group partners, adapting metadata to California Revealed’s standards, and coordinating digitization and preservation with external vendors.
-</p>
+<p>As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez oversees projects from application review through long-term preservation. This involves coordinating with partner organizations to write basic metadata and arrange shipping of materials.</p>
 
-<p>
-In addition to project management, Guadalupe creates educational resources such as handbooks to demystify digitization processes and technical jargon for community partners.
-</p>
+<p>Once collections are processed they are sent to third-party digitization vendors. After digitization, files are checked for fixity and metadata accuracy before quality control reports are shared with partners.</p>
 
-<p>
-A specialty of the role involves establishing preservation priorities using the FEMA Natural Risk Index and Healthy Places Index (HPI). These metrics help identify communities most vulnerable to climate risks or social inequities, ensuring that under-resourced communities receive greater archival support and access.
-</p>
+<p>Partners may also receive physical hard drives of digitized materials. Access copies are hosted online while preservation files are stored on LTO tape with copies stored both in Sacramento and in an off-site vault.</p>
 
-<h2>Similar Positions</h2>
+</div>
 
-<ul>
-<li>Video Preservation Specialist – Library of Congress</li>
-<li>Audiovisual Systems Archivist and Access Coordinator – University of Georgia</li>
-<li>Library Associate II (Digitization Lab Supervisor) – Georgia State University</li>
-</ul>
+<div class="section">
 
 <h2>Professional Context</h2>
 
-<p>
-California Revealed collaborates with professional organizations such as the Association of Moving Image Archivists (AMIA) and the Council on Library and Information Resources (CLIR). Staff regularly attend conferences including the Society of American Archivists Annual Meeting and AMIA’s annual conference.
-</p>
+<p>California Revealed collaborates with several professional organizations in the archival and media preservation fields.</p>
+
+<ul>
+<li>Association of Moving Image Archivists (AMIA)</li>
+<li>Council on Library and Information Resources (CLIR)</li>
+<li>Society of American Archivists (SAA)</li>
+</ul>
+
+<p>Staff regularly attend conferences such as the SAA Annual Meeting and AMIA’s annual conference.</p>
+
+</div>
+
+<div class="section">
 
 <h2>Job Market Outlook</h2>
 
-<p>
-According to the U.S. Bureau of Labor Statistics, employment for archivists, curators, and museum workers is projected to grow approximately 6% between 2024 and 2034. The growing volume of digital records across government, corporate, and nonprofit sectors is expected to increase demand for professionals who can organize, preserve, and provide access to information.
-</p>
+<p>According to the U.S. Bureau of Labor Statistics, employment for archivists, curators, and museum workers is projected to grow about 6% between 2024 and 2034. This growth is driven in part by increasing volumes of digital records that require management and long-term preservation.</p>
 
-<p>
-However, many positions remain dependent on grant funding or temporary contracts, particularly in community archives and smaller cultural institutions.
-</p>
+<p>However, many positions remain dependent on grant funding or temporary contracts. Community archives and digital preservation programs are expanding, but publicly funded cultural institutions can experience fluctuations depending on political priorities and funding availability.</p>
+
+</div>
+
+<div class="section">
 
 <h2>Technical Skill Snapshot</h2>
 
-<p>
-Audiovisual archivists must understand the preservation, restoration, and access of many media formats including film, magnetic tape, optical media, and digital files. Guadalupe’s early work at the Bay Area Video Coalition involved digitizing formats such as VHS, U-matic, DAT, and open reel tape.
-</p>
+<p>Audiovisual archivists must understand the preservation, restoration, and access of many media formats including film, magnetic video and audiotape, optical media, and digital files.</p>
 
-<p>
-These experiences developed the technical foundation required for managing large-scale audiovisual digitization projects at California Revealed.
-</p>
+<p>Guadalupe developed many of these skills through work with the Bay Area Video Coalition, digitizing formats such as VHS, U-matic, DAT, and open reel tape.</p>
 
-<h2>Labor Trends</h2>
+</div>
 
-<p>
-Long-term preservation initiatives often face unstable funding structures. California Revealed has historically been funded by the California State Library but has recently registered as a nonprofit organization to diversify funding opportunities and ensure sustainability.
-</p>
-
-<h2>Annotated Bibliography</h2>
-
-<p><strong>Arton, Carla.</strong> “So You Want to be an Audiovisual Archivist.” AMIA, 2015.</p>
-
-<p>
-This resource introduces audiovisual preservation work, describing typical responsibilities and career pathways while highlighting professional organizations and learning resources.
-</p>
-
-<p><strong>Caswell, Michelle et al.</strong> “Assessing the Affective Impact of Community Archives.” UCLA Community Archives Lab, 2018.</p>
-
-<p>
-This toolkit explains how archives can measure social and emotional impacts within communities and use those findings to support advocacy and funding efforts.
-</p>
-
-<p><strong>Gracy, Karen F.</strong> <em>Film Preservation: Competing Definitions of Value, Use, and Practice.</em> Society of American Archivists, 2007.</p>
-
-<p>
-A detailed exploration of preservation practice combined with broader reflections on the cultural significance of media preservation.
-</p>
+<div class="section">
 
 <h2>Summary of Contributions</h2>
 
 <ul>
-<li><strong>Sam Warford:</strong> Typical Tasks, Professional Contexts, Annotated Bibliography</li>
-<li><strong>Jack Morrissey:</strong> Overview, Labor Trends, Web design, Transcript editing</li>
-<li><strong>Ivan Mairesse:</strong> Interview coordination, Technical Skill Snapshot, Training Agenda</li>
-<li><strong>Sophie Mearns:</strong> Job Market Outlook, Web design, In-class presentation design</li>
+
+<li><strong>Sam Warford</strong> – Typical Tasks, Professional Context, Annotated Bibliography</li>
+
+<li><strong>Jack Morrissey</strong> – Overview, Labor Trends, Web design and transcript editing</li>
+
+<li><strong>Ivan Mairesse</strong> – Interview coordination, Technical Skill Snapshot, Training Agenda</li>
+
+<li><strong>Sophie Mearns</strong> – Job Market Outlook, Web design, In-class presentation design</li>
+
 </ul>
 
 </div>
 
-<div class="footer">
-Sophie Mearns – Archivist
-</div>
+<footer>
+IS 270 Project Website
+</footer>
+
+<script>
+
+/* scroll reveal */
+
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+});
+
+sections.forEach(section=>{
+observer.observe(section);
+});
+
+</script>
 
 </body>
 </html>
