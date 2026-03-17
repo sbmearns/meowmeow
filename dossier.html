@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Specialization Dossier</title>
 
 <style>
@@ -12,9 +12,10 @@ body{
 margin:0;
 padding:0;
 font-family:'Courier New', Courier, monospace;
-background-color:#556B2F;
+background:#556B2F;
 color:#FFF8DC;
 text-align:center;
+overflow-x:hidden;
 }
 
 /* NAV BAR */
@@ -48,51 +49,51 @@ font-size:2.8rem;
 }
 
 .subtitle{
-margin-bottom:3rem;
 font-size:1.2rem;
+margin-bottom:3rem;
 }
 
-/* DOSSIER SECTION BUBBLES */
+/* DOSSIER SECTIONS */
 
 .section{
+
 max-width:900px;
 margin:60px auto;
+
 padding:35px 40px;
+
 background:#FFF8DC;
-color:#2d2d2d;
+color:#2b2b2b;
+
 border-radius:18px;
+
 text-align:left;
-box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+box-shadow:0 12px 25px rgba(0,0,0,0.25);
 
 opacity:0;
 transform:translateY(40px);
-transition:all 0.8s ease;
+transition:all .8s ease;
+
 }
 
-/* scroll reveal */
+/* reveal on scroll */
 
 .section.visible{
 opacity:1;
 transform:translateY(0);
 }
 
-/* subtle hover */
+/* hover effect */
 
 .section:hover{
-transform:translateY(-5px);
-box-shadow:0 14px 30px rgba(0,0,0,0.3);
+transform:translateY(-6px);
+box-shadow:0 18px 35px rgba(0,0,0,.3);
 }
-
-/* headings inside sections */
 
 .section h2{
 margin-top:0;
-font-size:1.6rem;
-color:#3b4c1c;
-}
-
-.section h3{
-margin-top:1.4rem;
+color:#3d4c20;
 }
 
 .section p{
@@ -113,11 +114,34 @@ font-size:.9rem;
 color:#ddd;
 }
 
+/* FLOATING DOT BACKGROUND */
+
+.background-dots{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+overflow:hidden;
+}
+
+.dot{
+position:absolute;
+border-radius:50%;
+background:#f6c79c;
+opacity:0.35;
+transition:transform .2s linear;
+}
+
 </style>
 
 </head>
 
 <body>
+
+<div class="background-dots"></div>
 
 <nav>
 <a href="index.html">Home</a>
@@ -126,66 +150,115 @@ color:#ddd;
 </nav>
 
 <h1>IS 270 Specialization Dossier</h1>
-<div class="subtitle">Guadalupe Martinez – California Revealed's Audiovisual Digitization and Preservation Manager</div>
+
+<div class="subtitle">
+Guadalupe Martinez – California Revealed's Audiovisual Digitization and Preservation Manager
+</div>
+
 
 <div class="section">
+
 <h2>Overview</h2>
 
-<p>California Revealed is a statewide digitization initiative that helps public libraries, archives, museums, historical societies, and community heritage organizations digitize, preserve, and provide online access to archival materials documenting California’s histories, arts, and cultures.</p>
+<p>
+California Revealed is a statewide digitization initiative which helps public libraries, archives, museums, historical societies, and community heritage organizations digitize, preserve, and provide online access to archival materials documenting California’s histories, arts, and cultures.
+</p>
 
-<p>The program also supports cataloging work, community archiving projects, K–12 curriculum development, and Memory Labs at public libraries across California.</p>
+<p>
+The program also provides support for cataloging, community archiving, and K-12 curriculum development while offering training for Memory Labs at public libraries across the state.
+</p>
 
-<p>Originally founded in 2010 as the California Audiovisual Preservation Project (CAVPP), the initiative began as a temporary program funded by the California State Library. Over time it has grown significantly in scope and demand.</p>
+<p>
+Founded in 2010 as the California Audiovisual Preservation Project, the program originally began as a temporary initiative funded by the California State Library but has steadily expanded in scope and demand.
+</p>
 
 </div>
+
+
 
 <div class="section">
 
 <h2>Typical Tasks</h2>
 
-<p>As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez oversees projects from application review through long-term preservation. This involves coordinating with partner organizations to write basic metadata and arrange shipping of materials.</p>
+<p>
+As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez manages projects from application review through long-term preservation. This includes coordinating with partner organizations to create metadata and ship collections to digitization vendors.
+</p>
 
-<p>Once collections are processed they are sent to third-party digitization vendors. After digitization, files are checked for fixity and metadata accuracy before quality control reports are shared with partners.</p>
+<p>
+Once materials are digitized they undergo quality control checks including fixity verification and metadata validation before being delivered back to partner institutions.
+</p>
 
-<p>Partners may also receive physical hard drives of digitized materials. Access copies are hosted online while preservation files are stored on LTO tape with copies stored both in Sacramento and in an off-site vault.</p>
+<p>
+Digitized materials are stored in multiple locations including access copies on web servers and preservation copies on LTO tape stored both locally and off-site.
+</p>
 
 </div>
+
+
 
 <div class="section">
 
 <h2>Professional Context</h2>
 
-<p>California Revealed collaborates with several professional organizations in the archival and media preservation fields.</p>
+<p>
+California Revealed is connected to professional archival communities through organizations such as the Association of Moving Image Archivists (AMIA) and the Council on Library and Information Resources (CLIR).
+</p>
 
 <ul>
-<li>Association of Moving Image Archivists (AMIA)</li>
-<li>Council on Library and Information Resources (CLIR)</li>
-<li>Society of American Archivists (SAA)</li>
+
+<li>Society of American Archivists Annual Meeting</li>
+<li>Archives * Records Conference</li>
+<li>AMIA Annual Conference</li>
+
 </ul>
 
-<p>Staff regularly attend conferences such as the SAA Annual Meeting and AMIA’s annual conference.</p>
+<p>
+These networks support professional development and collaboration among audiovisual archivists and preservation specialists.
+</p>
 
 </div>
+
+
 
 <div class="section">
 
 <h2>Job Market Outlook</h2>
 
-<p>According to the U.S. Bureau of Labor Statistics, employment for archivists, curators, and museum workers is projected to grow about 6% between 2024 and 2034. This growth is driven in part by increasing volumes of digital records that require management and long-term preservation.</p>
+<p>
+According to the U.S. Bureau of Labor Statistics, employment for archivists, curators, and museum workers is projected to grow approximately six percent between 2024 and 2034.
+</p>
 
-<p>However, many positions remain dependent on grant funding or temporary contracts. Community archives and digital preservation programs are expanding, but publicly funded cultural institutions can experience fluctuations depending on political priorities and funding availability.</p>
+<p>
+Increasing volumes of digital records within government, nonprofit, and corporate sectors are expected to create demand for professionals who can organize and preserve information.
+</p>
+
+<p>
+Despite this growth, many archival positions remain dependent on grant funding or temporary contracts, particularly within community archives and smaller cultural heritage institutions.
+</p>
 
 </div>
+
+
 
 <div class="section">
 
 <h2>Technical Skill Snapshot</h2>
 
-<p>Audiovisual archivists must understand the preservation, restoration, and access of many media formats including film, magnetic video and audiotape, optical media, and digital files.</p>
+<p>
+Audiovisual archivists must understand the preservation, restoration, and access of many media formats including film, magnetic tape, optical media, and digital files.
+</p>
 
-<p>Guadalupe developed many of these skills through work with the Bay Area Video Coalition, digitizing formats such as VHS, U-matic, DAT, and open reel tape.</p>
+<p>
+Guadalupe developed these skills while working with the Bay Area Video Coalition, digitizing formats such as VHS, U-matic, DAT, and open reel tape.
+</p>
+
+<p>
+These technical foundations inform the coordination and oversight of digitization projects within California Revealed today.
+</p>
 
 </div>
+
+
 
 <div class="section">
 
@@ -195,7 +268,7 @@ color:#ddd;
 
 <li><strong>Sam Warford</strong> – Typical Tasks, Professional Context, Annotated Bibliography</li>
 
-<li><strong>Jack Morrissey</strong> – Overview, Labor Trends, Web design and transcript editing</li>
+<li><strong>Jack Morrissey</strong> – Overview, Labor Trends, Web design, Transcript editing</li>
 
 <li><strong>Ivan Mairesse</strong> – Interview coordination, Technical Skill Snapshot, Training Agenda</li>
 
@@ -205,26 +278,83 @@ color:#ddd;
 
 </div>
 
+
+
 <footer>
 IS 270 Project Website
 </footer>
 
+
 <script>
 
-/* scroll reveal */
+/* SCROLL REVEAL */
 
 const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver(entries => {
+
 entries.forEach(entry => {
+
 if(entry.isIntersecting){
 entry.target.classList.add("visible");
 }
+
 });
+
 });
 
 sections.forEach(section=>{
 observer.observe(section);
+});
+
+
+/* CREATE FLOATING BACKGROUND DOTS */
+
+const dotContainer = document.querySelector(".background-dots");
+
+const dotCount = 25;
+
+let dots = [];
+
+for(let i=0;i<dotCount;i++){
+
+let dot = document.createElement("div");
+
+dot.classList.add("dot");
+
+let size = Math.random()*120 + 30;
+
+dot.style.width = size+"px";
+dot.style.height = size+"px";
+
+dot.style.left = Math.random()*100+"vw";
+dot.style.top = Math.random()*200+"vh";
+
+dotContainer.appendChild(dot);
+
+dots.push({
+el:dot,
+baseSize:size
+});
+
+}
+
+
+/* DOT SCROLL ANIMATION */
+
+window.addEventListener("scroll",()=>{
+
+let scroll = window.scrollY;
+
+dots.forEach((dot,i)=>{
+
+let scale = 1 + Math.sin((scroll*0.002)+i)*0.4;
+
+dot.el.style.transform =
+`scale(${scale}) translateY(${scroll*-0.05}px)`;
+
+});
+
 });
 
 </script>
