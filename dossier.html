@@ -1,143 +1,77 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IS 270 Specialization Dossier – Guadalupe Martinez</title>
+<title>IS 270 Specialization Dossier</title>
 
 <style>
-
-/* PAGE */
-
-body{
-margin:0;
-font-family:'Courier New', Courier, monospace;
-background:#556B2F;
-color:#FFF8DC;
-line-height:1.6;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8e8d8;
+  overflow-x: hidden;
 }
 
-/* POLKA DOT BACKGROUND */
-
-#polkaCanvas{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:0;
-pointer-events:none;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-/* NAV */
-
-nav{
-position:sticky;
-top:0;
-background:#556B2F;
-padding:15px;
-text-align:center;
-z-index:3;
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-nav a{
-color:#FFF8DC;
-text-decoration:none;
-margin:0 20px;
-font-weight:bold;
+.section {
+  background: #fff4e6;
+  padding: 25px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-nav a:hover{
-text-decoration:underline;
+h1, h2 {
+  margin-top: 0;
 }
-
-/* HEADER */
-
-.header{
-text-align:center;
-padding:60px 20px;
-position:relative;
-z-index:2;
-}
-
-.header h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-.header h2{
-font-size:1.4rem;
-margin-bottom:10px;
-}
-
-/* CONTENT BUBBLES */
-
-.bubble{
-background:rgba(255,248,220,0.95);
-color:#111;
-border-radius:25px;
-padding:30px;
-margin:40px auto;
-max-width:1000px;
-box-shadow:0 5px 20px rgba(0,0,0,0.25);
-position:relative;
-z-index:2;
-}
-
-h3{
-color:#556B2F;
-margin-top:0;
-}
-
 </style>
-
 </head>
 
 <body>
 
-<canvas id="polkaCanvas"></canvas>
+<canvas id="bg"></canvas>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="specialization.html">Specialization Dossier</a>
-<a href="about.html">About</a>
-</nav>
+<div class="container">
 
-<div class="header">
 <h1>IS 270 Specialization Dossier: Guadalupe Martinez</h1>
-<h2>Guadalupe Martinez - California Revealed's Audiovisual Digitization and Preservation Manager</h2>
+<p><strong>Guadalupe Martinez - California Revealed's Audiovisual Digitization and Preservation Manager</strong></p>
 <p><strong>Full Interview Transcript</strong></p>
+
+<div class="section">
+<h2>Overview</h2>
+<p>California Revealed is a statewide digitization initiative which helps public libraries, archives, museums, historical societies, and other heritage groups digitize, preserve, and provide online access to archival materials documenting the state's histories, arts, and cultures. It also provides support and assistance for cataloging, community archiving, and K-12 curriculum development, and provides training and support for Memory Labs at public libraries across California. It began in 2010 as CAVPP as a temporary program funded by the California State Library, and since then has grown in capability, scope, and demand year after year.</p>
+<p>As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez manages and oversees California Revealed projects from application review to long-term preservation. This involves coordinating with partner organizations to write basic metadata for and then ship their collections, which are then processed, documented, and given further metadata before being sent to third-party vendors for digitization. Once digitized, they are checked for fixity and to see if metadata has been assigned correctly, and Guadalupe and other preservation managers will communicate with the digitization vendor in the case of any discrepancies. The initial quality control report is then sent to partners to be signed off, but this is not always done as familiarity with QC varies from organization to organization.</p>
+<p>If requested, partners will then be given a physical hard drive of their digitized materials. Digitized collections are finally given three points of access, one being access copies stored on an AWS web server, and the other two being LTO tape copies with preservation quality files kept on them, one of which is kept at California Revealed in Sacramento, and the other of which is sent to a vault in Ohio. Throughout this process Guadalupe consults partners, preservation experts, vendors, and third-party services to resolve issues, establish trust, and explain A/V preservation at various levels.</p>
 </div>
 
-<div class="bubble">
-
-<h3>Overview</h3>
-
-<p>California Revealed is a statewide digitization initiative which helps public libraries, archives, museums, historical societies, and other heritage groups digitize, preserve, and provide online access to archival materials documenting the state's histories, arts, and cultures. It also provides support and assistance for cataloging, community archiving, and K-12 curriculum development, and provides training and support for Memory Labs at public libraries across California. It began in 2010 as CAVPP as a temporary program funded by the California State Library, and since then has grown in capability, scope, and demand year after year.</p>
-
-<p>As Audiovisual Digitization and Preservation Manager, Guadalupe Martinez manages and oversees California Revealed projects from application review to long-term preservation. This involves coordinating with partner organizations to write basic metadata for and then ship their collections, which are then processed, documented, and given further metadata before being sent to third-party vendors for digitization. Once digitized, they are checked for fixity and to see if metadata has been assigned correctly, and Guadalupe and other preservation managers will communicate with the digitization vendor in the case of any discrepancies. The initial quality control report is then sent to partners to be signed off, but this is not always done as familiarity with QC varies from organization to organization.</p>
-
-<p>If requested, partners will then be given a physical hard drive of their digitized materials. Digitized collections are finally given three points of access, one being access copies stored on an AWS web server, and the other two being LTO tape copies with preservation quality files kept on them, one of which is kept at California Revealed in Sacramento, and the other of which is sent to a vault in Ohio. Throughout this process Guadalupe consults partners, preservation experts, vendors, and third-party services to resolve issues, establish trust, and explain A/V preservation at various levels.</p>
-
-<h3>Typical Tasks</h3>
-
+<div class="section">
+<h2>Typical Tasks</h2>
 <p>As Audiovisual Digitization and Preservation Manager, Guadalupe is responsible for assessing the feasibility of intaking a digitization project from community heritage group partners, adapting the partner’s initial metadata to California Revealed’s formatting standards, and coordinating the digitization and preservation of the materials with an external vendor. In addition to project management, Guadalupe creates educational resources such as handbooks to help demystify the digitization process and the jargon surrounding it for their community in an effort to not only help them be better stewards of their materials but to also help gain their trust as partners.</p>
-
 <p>One specialty she performs as Manager is establishing a priority of care for communities based on FEMA Natural Risk Index for Natural Hazards and Healthy Places Index (HPI) scores. Such factors that are taken into account for FEMA results are the risks for climate disaster, while HPI is concerned with employment and education opportunities, air quality and access to clean water, among others impacting life expectancy. Guadalupe emphasized the importance of providing “more access to people who are already being under-resourced in other aspects of their lives, not just from a historical standpoint.” Collecting this information is vital for not only better understanding the preservation needs and level of impact California Revealed can have but also can justify further funding.</p>
-
-<p><strong>Three similar job descriptions at similar levels of seniority are:</strong></p>
-
-<p>Video Preservation Specialist, Library of Congress<br>
+<p>Three similar job descriptions at similar levels of seniority are:</p>
+<p>
+Video Preservation Specialist, Library of Congress<br>
 Audiovisual Systems Archivist and Access Coordinator, University of Georgia<br>
-Library Associate II (Digitization Lab Supervisor), Georgia State University</p>
+Library Associate II (Digitization Lab Supervisor), Georgia State University
+</p>
+</div>
 
-<h3>Professional Context</h3>
-
+<div class="section">
+<h2>Professional Context</h2>
 <p>California Revealed is associated with The Association of Moving Image Archivists (AMIA), as well as the Council on Library and Information Resources (CLIR) for grant and fellowship funding. Conferences they attend are the Society of American Archivists’ (SAA) Annual Meeting, Archives * Records, and AMIA’s annual conference. Relevant journals are The Moving Image, Journal of Film and Video, Journal of the Society of Archivists, American Archivist, Archival Outlook, Journal of Film Preservation, and Digital Video.</p>
-
-<p><strong>The following are links to several job boards for archivists:</strong></p>
-
+<p>The following are links to several job boards for archivists:</p>
 <p>
 Employment Opportunities | The Academy of Certified Archivists<br>
 Audio/Visual - Archives Gig<br>
@@ -146,9 +80,7 @@ Preservation jobs - Code4Lib Job Board<br>
 Audiovisual jobs - Code4Lib Job Board<br>
 SAA Career Center
 </p>
-
-<p><strong>Here are other blogs, listserves, and other online resources:</strong></p>
-
+<p>Here are other blogs, listserves, and other online resources:</p>
 <p>
 SAA Blogs<br>
 The Signal at Library of Congress<br>
@@ -157,125 +89,100 @@ Western Archivists Listserv<br>
 Federal Library Listservs<br>
 Memory Lab Network
 </p>
+</div>
 
-<h3>Job Market Outlook</h3>
-
+<div class="section">
+<h2>Job Market Outlook</h2>
 <p>Despite the dismantling of the Institute of Museum and Library Services (IMLS) and cuts to federal funding through the National Endowment for the Humanities, the job market has continued to grow. Fee-for-service models, along with reliance on private donations and community partnerships, have proven to be the most effective in keeping libraries and archives afloat. During this time of crisis for the humanities, growing concern for collective memory and community identity has increased awareness of archival resources and of individuals’ responsibilities in preserving them. According to the U.S. Bureau of Labor Statistics, employment for archivists, curators, and museum workers is projected to grow about 6% between 2024 and 2034, slightly faster than the average for all occupations, with roughly 4,800 openings each year as workers retire or move to other roles. The agency notes that increasing volumes of digital records, particularly within government, corporate, and nonprofit sectors, are expected to drive demand for professionals who can organize, preserve, and provide access to information.</p>
-
 <p>Although the market is predicted to grow, the field faces structural challenges. Many archival positions remain tied to grant funding, temporary contracts, or small institutional budgets, which can limit long-term job stability. Some sectors, particularly community archives and digital preservation initiatives, appear to be expanding, while traditional positions within publicly funded cultural institutions may fluctuate depending on political priorities and funding availability.</p>
-
 <p>Debates about artificial intelligence also shape perceptions of the profession’s future. Some studies suggest that aspects of archival work, such as metadata generation, transcription, or large-scale document analysis, could be partially automated by AI systems. However, scholars and practitioners emphasize that archival labor involves interpretation, contextual knowledge, preservation expertise, and ethical decision-making, all of which are difficult to automate. According to WillRobotsTakeMyJob.com, archivist jobs are at a 36% risk of being automated, which is considered low to moderate risk, and with an estimation of 3.8% job growth by 2034. Their website states: ”Low Risk (21-40%): Jobs in this level have a limited risk of automation, as they demand a mix of technical and human-centric skills,” with a user poll stating a “43% chance of full automation within the next two decades”.</p>
+</div>
 
-<h3>Technical Skill Snapshop</h3>
-
+<div class="section">
+<h2>Technical Skill Snapshot</h2>
 <p>Audiovisual archivists must have a comprehensive understanding of the history, conservation, restoration, access, and curation of audiovisual formats, including film, magnetic video and audiotape, optical media, and digital media. According to the Association of Moving Image Archivists, the position of audiovisual digitization and preservation manager would be categorized as a mid-level position within the media archiving field. The position entails coordinating digitization endeavors and project management through collaborating with partners and vendors.</p>
-
 <p>Guadalupe’s introduction to media preservation involved familiarizing themselves with and digitizing several video formats while working with the Bay Area video coalition (BAVC). At BAVC, Guadalupe undertook projects that presented them with the task of handling, cleaning, and converting footage from a wide array of video formats including open real ¼ inch tape, VHS, U-matic, DAT, and Maddox, as well as digitizing sound recordings. Acquiring this skill-set provided Guadalupe with a knowledge of and facility with audiovisual materials that they could utilize when pivoting to their current position as audiovisual digitization and preservation manager.</p>
-
 <p>As preservation manager at California Revealed, Guadalupe is responsible for properly rehousing the various collections that the organization decides to nominate for digitization. This process involves connecting partners’ collections to appropriate vendors who then do the digitizing of the materials. Redirecting their knowledge of proper digitization practices and preservation protocol, Guadalupe administers the transferring of their partners’ materials and metadata, functioning as an intermediary to make these materials pertaining to California cultural history widely and freely available.</p>
+</div>
 
-<h3>Labor Trends</h3>
+<div class="section">
+<h2>Labor Trends</h2>
+<p>One tendency of long-term preservation initiatives is the uncertainty and precarious nature of funding. In the case of California Revealed, they began as an initiative of the California State Library and have been primarily funded by them for their 15 year history. Long-term preservation projects like California Revealed find themselves at odds with yearly, fiscally-sponsored budgets, especially at a time when libraries have found themselves politicized and subject to sudden federal cuts like last year’s cancellation of Institute of Museum and Library Science grants. While the State Library’s IMLS funding is being restored after the cuts were struck down in court late last year, time constraints and deliverables required by the State Library still stand, meaning the next year’s worth of California Revealed’s projects must be completed in just eight months and meet requirements set when funds were awarded.</p>
+<p>These constraints often entail very strict ways in which funds can be appropriated, and can be imposed with a limited understanding of digital preservation work, severely limiting the autonomy of organizations like California Revealed. For example, having bespoke storage systems set up specifically for California Revealed's digital repository isn’t practical due to this fiscal funding structure, and therefore they use Amazon Web Services and Amazon Simple Storage Service in combination with the digital asset management system Archipelago. California Revealed has navigated funding uncertainty and institutional constraints by recently registering as a 501(c)3 nonprofit, enabling them to apply for and accept funding from outside sources.</p>
+<p>While funding sources for long-term preservation work are limited, California Revealed has been awarded grants from the Mellon Foundation and elsewhere, enabling them to continue their mission as well as as begin to expand the scope of their organization. This is not typically the case for archives who lose funding or become acquired by another institution. In most cases, these archives lose the ability to negotiate the life of their materials, be it via deaccessioning or being absorbed by institutions with different goals. As a growing media repository, California Revealed also has the added burden of needing to explain not only their unique partner model but also their various audiovisual, born digital, and print specific preservation needs to larger funding institutions normally accustomed to typical GLAM institutions.</p>
+</div>
 
-<p>One tendency of long-term preservation initiatives is the uncertainty and precarious nature of funding...</p>
+<div class="section">
+<h2>Annotated Bibliography</h2>
+<p>Arton, Carla. “So You Want to be an Audiovisual Archivist.” AMIA. Last modified June 2015. https://amianet.org/wp-content/uploads/Resource-Education-So-You-Want-to-be-1.pdf.
+This is an excellent resource for anyone interested in audiovisual preservation. It breaks down the history of the field, the different types of materials AV preservationists work with, and job responsibilities of people at various stages of the profession. It also introduces resources for professional development such as readings and membership associations.</p>
 
-<h3>Annotated Bibliography</h3>
+<p>Caswell, Michelle et al. “Assessing the Affective Impact of Community Archives: A Toolkit.” UCLA Community Archives Lab. Last modified November 2018. https://communityarchiveslab.ucla.edu/wp-content/uploads/2018/11/InitialToolkit -compressed.pdf.
+This toolkit provides practical guidance for community archives to document and analyze the emotional and social impact of their work on the communities they serve. It offers helpful advice on conducting interviews and focus groups with stakeholders to foster identity, belonging, and representation for marginalized groups in archives. By demonstrating these impacts, any archive can strengthen their ability to secure funding, advocate for their value, and support community empowerment.</p>
 
-<p><strong>Arton, Carla.</strong> “So You Want to be an Audiovisual Archivist.” AMIA. Last modified June 2015.</p>
+<p>Gracy, Karen F. Film Preservation: Competing Definitions of Value, Use, and Practice. Society of American Archivists. 2007.
+This book simultaneously lays out guidelines for media preservationists in training and presents a carefully written assessment of the cultural implications of this work. The merging of detail-oriented descriptions of preservation practices with thoughtful chapters on preservation history and theory make for a useful multi-purpose resource.</p>
 
-<p><strong>Caswell, Michelle et al.</strong> “Assessing the Affective Impact of Community Archives: A Toolkit.” UCLA Community Archives Lab.</p>
+<p>Papadouris, Maria. “Funding opportunities for libraries, archives, and special collections: May-December 2025.” JSTOR. Last modified May 9, 2025. https://about.jstor.org/blog/funding-opportunities-for-libraries-archives-and-special-collections-may-december-2025/.
+This blog post provides a helpful list of funding sources for US-based libraries, archives, and museums. Although it was published in 2025 and much of the federal funding has since been pulled from the Humanities, the foundation and private grant listings remain active and updated for 2026. Overall, it serves as a useful starting point for smaller archives beginning their search for funding opportunities.</p>
 
-<p><strong>Gracy, Karen F.</strong> Film Preservation: Competing Definitions of Value, Use, and Practice.</p>
+<p>Society for American Archivists. “Directory of Archival Consultants.” 2026. Accessed March 3, 2026. https://www2.archivists.org/consultants?tid=Audiovisual+Preservation+and+Digitization.
+The Society for American Archivists' website includes a comprehensive directory with information about experts working in various archive-related fields. The directory allows users to locate specific areas of focus and individuals or organizations in these subfields. While conducting research on the professional duties and services of practitioners within audiovisual digitization and preservation management, this directory was a profitable resource. By accessing a list of experts’ summaries of their respective responsibilities, we were able to form a clearer understanding of day-to-day tasks, required skills, and how the position benefits archival institutions’ larger missions.</p>
+</div>
 
-<p><strong>Papadouris, Maria.</strong> “Funding opportunities for libraries, archives, and special collections: May-December 2025.”</p>
-
-<p><strong>Society for American Archivists.</strong> “Directory of Archival Consultants.”</p>
-
-<h3>Summary of Contributions</h3>
-
-<p>
-Sam Warford: Typical Tasks, Professional Contexts, Annotated Bibliography<br>
-Jack Morrissey: Overview, Labor Trends, web design and transcript editing<br>
-Ivan Mairesse: Interview coordination, Technical Skill Snapshot, Training Agenda<br>
-Sophie Mearns: Job Market Outlook, Web design, In-class presentation design
-</p>
+<div class="section">
+<h2>Summary of Contributions</h2>
+<p>Sam Warford: Typical Tasks, Professional Contexts, Annotated Bibliography</p>
+<p>Jack Morrissey: Overview, Labor Trends, web design and transcript editing</p>
+<p>Ivan Mairesse: Interview coordination, Technical Skill Snapshot, Training Agenda</p>
+<p>Sophie Mearns: Job Market Outlook, Web design, In-class presentation design</p>
+</div>
 
 </div>
 
 <script>
-
-const canvas = document.getElementById("polkaCanvas");
+const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
 let dots = [];
 
-function resizeCanvas() {
-  const dpr = window.devicePixelRatio || 1;
-
-  canvas.width = window.innerWidth * dpr;
-  canvas.height = window.innerHeight * dpr;
-
-  canvas.style.width = window.innerWidth + "px";
-  canvas.style.height = window.innerHeight + "px";
-
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-  createDots();
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
+resize();
+window.addEventListener("resize", resize);
 
-window.addEventListener("resize", resizeCanvas);
-
-function createDots() {
-  dots = [];
-
-  for (let i = 0; i < 40; i++) {
-    dots.push({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * document.body.scrollHeight,
-      r: Math.random() * 20 + 10,
-      dx: (Math.random() - 0.5) * 0.05,
-      dy: (Math.random() - 0.5) * 0.05,
-      phase: Math.random() * Math.PI * 2,
-      speed: Math.random() * 0.001 + 0.0005
-    });
-  }
+for (let i = 0; i < 40; i++) {
+  dots.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: 20 + Math.random() * 30,
+    dx: (Math.random() - 0.5) * 0.3,
+    dy: (Math.random() - 0.5) * 0.3
+  });
 }
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  let t = Date.now();
-  let scrollY = window.scrollY;
+  dots.forEach(dot => {
+    dot.x += dot.dx;
+    dot.y += dot.dy;
 
-  dots.forEach(d => {
-
-    // slow drift
-    d.x += d.dx;
-    d.y += d.dy;
-
-    // wrap instead of bounce (more natural)
-    if (d.x < -50) d.x = window.innerWidth + 50;
-    if (d.x > window.innerWidth + 50) d.x = -50;
-    if (d.y < -50) d.y = document.body.scrollHeight + 50;
-    if (d.y > document.body.scrollHeight + 50) d.y = -50;
-
-    // subtle pulsing
-    let radius = d.r + Math.sin(t * d.speed + d.phase) * 2;
-
-    // parallax effect (this is the magic)
-    let yOnScreen = d.y - scrollY * 0.3;
+    if (dot.x < 0 || dot.x > canvas.width) dot.dx *= -1;
+    if (dot.y < 0 || dot.y > canvas.height) dot.dy *= -1;
 
     ctx.beginPath();
-    ctx.arc(d.x, yOnScreen, radius, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255, 180, 80, 0.6)";
+    ctx.arc(dot.x, dot.y, dot.r, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255, 200, 150, 0.4)";
     ctx.fill();
   });
 
   requestAnimationFrame(animate);
 }
 
-resizeCanvas();
 animate();
-
 </script>
 
 </body>
